@@ -10,5 +10,6 @@ namespace identity.API.Repositories
     {
         Task<IEnumerable<User>> GetUser();
         Task<User> GetUser(string ItemId);
+        Task<User> GetUserByEmail(string email);
     }
 }

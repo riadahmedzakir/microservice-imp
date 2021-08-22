@@ -40,9 +40,13 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "IdentityServer4": {
+              "target": "Package",
+              "version": "[4.1.2, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[5.0.8, )"
+              "version": "[5.0.9, )"
             },
             "MongoDB.Driver": {
               "target": "Package",

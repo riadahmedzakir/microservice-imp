@@ -1,10 +1,11 @@
-﻿using identity.API.Data;
-using identity.API.Entities;
-using MongoDB.Driver;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+
+using MongoDB.Driver;
+
+using identity.API.Data;
+using identity.API.Entities;
 
 namespace identity.API.Repositories
 {
@@ -24,6 +25,11 @@ namespace identity.API.Repositories
         public async Task<User> GetUser(string ItemId)
         {
             return await _context.Users.Find(p => p.ItemId == ItemId).FirstOrDefaultAsync();
+        }
+
+        public async Task<User> GetUserByEmail(string email)
+        {
+            return await _context.Users.Find(p => p.Email == email).FirstOrDefaultAsync();
         }
     }
 }

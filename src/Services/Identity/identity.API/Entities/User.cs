@@ -1,9 +1,4 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using MongoDB.Bson.Serialization.Attributes;
 
 namespace identity.API.Entities
 {
@@ -16,5 +11,6 @@ namespace identity.API.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
+        public string[] Roles { get; set; }
     }
 }
