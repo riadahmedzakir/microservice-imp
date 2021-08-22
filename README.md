@@ -19,3 +19,4 @@ Replicating identity micro service with JWT token based authentication
         # Create a second client/tenant to check security and configurablity
         # Take default identityserver4 token to custom controller.
         # Change token encryption from symetric to asemtetric.
+        # Make token and refresh token validity configurable.
