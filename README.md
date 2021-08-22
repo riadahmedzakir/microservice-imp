@@ -14,7 +14,7 @@ Replicating identity micro service with JWT token based authentication
         # Roles are configurable from dabase.
         # Each action uses CustomAuthorizeAttribute to check request permission from database as configurable
 ## To do
-        # Implement password hassing
+        # Implement password hashing
         # Create client/tenant to create and login with user.
         # Create a second client/tenant to check security and configurablity
         # Take default identityserver4 token to custom controller.
