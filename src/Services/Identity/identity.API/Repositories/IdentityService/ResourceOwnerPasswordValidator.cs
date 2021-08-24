@@ -28,7 +28,10 @@ namespace identity.API.Repositories.IdentityService
                 if (user != null)
                 {
                     // check if password match - remember to hash password if stored as hash in db
-                    if (user.Password == context.Password)
+                    byte[] hashBytes = user.PasswordHash;
+                    PasswordHash hash = new PasswordHash(hashBytes);
+
+                    if (hash.Verify(context.Password))
                     {
                         context.Result = new GrantValidationResult(
                             subject: user.ItemId,

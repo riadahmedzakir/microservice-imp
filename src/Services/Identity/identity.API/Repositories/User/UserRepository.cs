@@ -6,6 +6,10 @@ using MongoDB.Driver;
 
 using identity.API.Data;
 using identity.API.Entities;
+using Microsoft.AspNetCore.Http;
+using identity.API.Validators;
+using FluentValidation.Results;
+using identity.API.Repositories.IdentityService;
 
 namespace identity.API.Repositories
 {
@@ -32,9 +36,24 @@ namespace identity.API.Repositories
             return await _context.Users.Find(p => p.Email == email).FirstOrDefaultAsync();
         }
 
-        public async Task CrateUser(User user)
+        public async Task<ValidationResult> CrateUser(User user, string TenantId)
         {
+            HasValidUserInformation validator = new HasValidUserInformation(TenantId);
+            ValidationResult result = validator.Validate(user);
 
+            if (result.IsValid)
+            {
+                IUserContext _userContext = new UserContext(TenantId);
+                string userPassword = user.Password;
+                PasswordHash hash = new PasswordHash(userPassword);
+                byte[] hashBytes = hash.ToArray();
+                user.Password = "";
+                user.PasswordHash = hashBytes;
+
+                await _userContext.Users.InsertOneAsync(user);
+            }
+
+            return result;
         }
     }
 }

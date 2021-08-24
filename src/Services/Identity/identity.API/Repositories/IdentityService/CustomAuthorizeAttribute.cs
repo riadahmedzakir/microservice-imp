@@ -40,7 +40,7 @@ namespace identity.API.Repositories.IdentityService
                 .Find(featureRoleMapfilter)
                 .ToListAsync();
 
-            if (featureRoleMaps == null)
+            if (featureRoleMaps.Count == 0)
             {
                 context.Result = new ForbidResult();
             }

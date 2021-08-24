@@ -8,6 +8,7 @@ C:\Users\riad_\Desktop\microservices\src\Services\Identity\identity.API\bin\Debu
 C:\Users\riad_\Desktop\microservices\src\Services\Identity\identity.API\bin\Debug\net5.0\ref\identity.API.dll
 C:\Users\riad_\Desktop\microservices\src\Services\Identity\identity.API\bin\Debug\net5.0\identity.API.pdb
 C:\Users\riad_\Desktop\microservices\src\Services\Identity\identity.API\bin\Debug\net5.0\DnsClient.dll
+C:\Users\riad_\Desktop\microservices\src\Services\Identity\identity.API\bin\Debug\net5.0\FluentValidation.dll
 C:\Users\riad_\Desktop\microservices\src\Services\Identity\identity.API\bin\Debug\net5.0\IdentityModel.dll
 C:\Users\riad_\Desktop\microservices\src\Services\Identity\identity.API\bin\Debug\net5.0\IdentityServer4.dll
 C:\Users\riad_\Desktop\microservices\src\Services\Identity\identity.API\bin\Debug\net5.0\IdentityServer4.Storage.dll

@@ -1,4 +1,6 @@
-﻿using identity.API.Entities;
+﻿using FluentValidation.Results;
+using identity.API.Entities;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +13,6 @@ namespace identity.API.Repositories
         Task<IEnumerable<User>> GetUser();
         Task<User> GetUser(string ItemId);
         Task<User> GetUserByEmail(string email);
-        Task CrateUser(User user);
+        Task<ValidationResult> CrateUser(User user, string TenantId);
     }
 }

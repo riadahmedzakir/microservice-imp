@@ -20,6 +20,7 @@ using identity.API.Repositories.Profile;
 using identity.API.Data.Feature;
 using identity.API.Repositories.TenantIdentity;
 using Microsoft.Extensions.Logging;
+using identity.API.Data.Role;
 
 namespace identity.API
 {
@@ -42,7 +43,7 @@ namespace identity.API
                     .AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader()
-                    //.WithOrigins("http://www.test.com:8080")
+                //.WithOrigins("http://www.test.com:8080")
                 );
             });
 
@@ -82,6 +83,7 @@ namespace identity.API
             services.AddScoped<ITokenUserContext, TokenUserContext>();
             services.AddScoped<IUserContext, UserContext>();
             services.AddScoped<IFeatureContext, FeaturesContext>();
+            services.AddScoped<IRoleContext, RoleContext>();
 
             services.AddScoped<ITenantIdentityRepository, TenantIdentityRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
