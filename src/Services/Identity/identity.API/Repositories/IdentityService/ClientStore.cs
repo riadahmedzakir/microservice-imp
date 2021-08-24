@@ -30,6 +30,7 @@ namespace identity.API.Repositories.IdentityService
                     ClientSecrets = new[] { new Secret(tenant.ClientSecret.Sha512()) },
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPasswordAndClientCredentials,
                     AllowOfflineAccess = true,
+                    AllowedCorsOrigins = { "http://" + tenant.HostName + ":8080" },
                     AllowedScopes = {
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile

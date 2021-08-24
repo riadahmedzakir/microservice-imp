@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 
 using identity.API.Repositories.TenantIdentity;
 using identity.API.Entities;
+using System.Text.RegularExpressions;
 
 namespace identity.API.Controllers
 {
@@ -31,12 +32,15 @@ namespace identity.API.Controllers
             string referer = HttpContext.Request.Headers["Referer"];
             string origin = HttpContext.Request.Headers["Origin"];
 
-            if (string.IsNullOrEmpty(referer) || string.IsNullOrEmpty(origin))
+            string refererDomain = Regex.Replace(referer.Replace("http://", "").Replace("https://", ""), ":\\d+/", "");
+            string originDomain = Regex.Replace(origin.Replace("http://", "").Replace("https://", ""), ":\\d+", "");
+
+            if (string.IsNullOrEmpty(referer.Replace("http://", "").Replace("https://", "")) || string.IsNullOrEmpty(origin))
             {
                 return StatusCode(500);
             }
 
-            Tenant tenant = await _repository.GetIdentity(referer, origin);
+            Tenant tenant = await _repository.GetIdentity(refererDomain, originDomain);
 
             return Ok(tenant);
         }

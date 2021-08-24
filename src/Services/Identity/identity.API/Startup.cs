@@ -19,6 +19,7 @@ using identity.API.Repositories.IdentityService;
 using identity.API.Repositories.Profile;
 using identity.API.Data.Feature;
 using identity.API.Repositories.TenantIdentity;
+using Microsoft.Extensions.Logging;
 
 namespace identity.API
 {
@@ -35,6 +36,16 @@ namespace identity.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", policyBuilder => policyBuilder
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    //.WithOrigins("http://www.test.com:8080")
+                );
+            });
+
             // AddDeveloperSigningCredential not something we want to use in a production environment;
             // For the production environment, you should use the AddSigningCredentials method and provide a valid certificate.
             services.AddIdentityServer()
@@ -55,6 +66,7 @@ namespace identity.API
 
             services.AddControllers()
                 .AddJsonOptions(opts => opts.JsonSerializerOptions.PropertyNamingPolicy = null);
+
             services.AddHttpContextAccessor();
 
             services.AddSwaggerGen(c =>
@@ -73,13 +85,12 @@ namespace identity.API
 
             services.AddScoped<ITenantIdentityRepository, TenantIdentityRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors("CorsPolicy");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

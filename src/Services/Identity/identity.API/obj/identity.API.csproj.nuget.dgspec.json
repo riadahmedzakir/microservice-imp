@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[10.3.1, )"
+            },
             "IdentityServer4": {
               "target": "Package",
               "version": "[4.1.2, )"

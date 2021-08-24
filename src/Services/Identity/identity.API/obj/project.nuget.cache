@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "RRwaplBHLr+FU5TjpdQVb2YZ3iirj42VWgLDB3l/4PG2rBi2ZlNr30eKObQgGUO86YPXKiSnJ286IARyjMhY/A==",
+  "dgSpecHash": "uV5HPka8/ukNE6NX1XfzucLbr1x1gsYHquCsSG88DQDEM2SJ/4HgPrjfmY+g27qBVjyqMCp+i/hLBU4q4h2Zag==",
   "success": true,
   "projectFilePath": "C:\\Users\\riad_\\Desktop\\microservices\\src\\Services\\Identity\\identity.API\\identity.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\riad_\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
+    "C:\\Users\\riad_\\.nuget\\packages\\fluentvalidation\\10.3.1\\fluentvalidation.10.3.1.nupkg.sha512",
     "C:\\Users\\riad_\\.nuget\\packages\\identitymodel\\4.4.0\\identitymodel.4.4.0.nupkg.sha512",
     "C:\\Users\\riad_\\.nuget\\packages\\identityserver4\\4.1.2\\identityserver4.4.1.2.nupkg.sha512",
     "C:\\Users\\riad_\\.nuget\\packages\\identityserver4.storage\\4.1.2\\identityserver4.storage.4.1.2.nupkg.sha512",

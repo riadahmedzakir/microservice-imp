@@ -31,5 +31,10 @@ namespace identity.API.Repositories
         {
             return await _context.Users.Find(p => p.Email == email).FirstOrDefaultAsync();
         }
+
+        public async Task CrateUser(User user)
+        {
+
+        }
     }
 }
