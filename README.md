@@ -15,8 +15,11 @@ Replicating identity micro service with JWT token based authentication
         # Each action uses CustomAuthorizeAttribute to check request permission from database as configurable
         # Implement password hassing
         # Created user creation endpoint with FluentValidation
-## To do        
+## To do
         # Create client/tenant to create and login with user.
         # Create a second client/tenant to check security and configurablity
         # Take default identityserver4 token to custom controller.
         # Change token encryption from symetric to asemtetric.
+        # Make token and refresh token validity configurable.
+        # Implement social login.
+        # Look into Azure MFA.        
