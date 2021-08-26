@@ -15,6 +15,7 @@ Replicating identity micro service with JWT token based authentication
         # Each action uses CustomAuthorizeAttribute to check request permission from database as configurable
         # Implement password hassing
         # Created user creation endpoint with FluentValidation
+        # Added self-signed certificate for production enviorment.
 ## To do
         # Create client/tenant to create and login with user.
         # Create a second client/tenant to check security and configurablity
