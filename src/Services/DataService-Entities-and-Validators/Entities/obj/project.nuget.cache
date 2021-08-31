@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "dA/01z024B2RORNpLAEGWSla4P107y6SNAKw8oMF1EcsrfQyKd5MMn7VZFoOMhk0a67DL1vj/uJCdpKmHyd/ig==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\riad_\\Desktop\\microservices\\src\\Services\\DataService-Entities-and-Validators\\Entities\\Entities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\riad_\\.nuget\\packages\\mongodb.bson\\2.13.1\\mongodb.bson.2.13.1.nupkg.sha512",
+    "C:\\Users\\riad_\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataService-Entities-and-Validators\Entities\Entities.csproj" />
+    <ProjectReference Include="..\..\DataService-Entities-and-Validators\Validators\Validators.csproj" />
+  </ItemGroup>
+
+</Project>

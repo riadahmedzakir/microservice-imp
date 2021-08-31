@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "0yfcSgD1fWNihRMfENCQgSD4dVoY6o3ZzyL/XV0Z/KUBOkE+QCFknVsv/j0k1qyay1YwnzwSQ02pWmYhZJrGKQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\riad_\\Desktop\\microservices\\src\\Services\\DataService\\DataService.Infrastructure\\DataService.Infrastructure.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\riad_\\.nuget\\packages\\mongodb.bson\\2.13.1\\mongodb.bson.2.13.1.nupkg.sha512",
+    "C:\\Users\\riad_\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
