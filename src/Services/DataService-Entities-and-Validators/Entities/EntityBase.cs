@@ -5,6 +5,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Entities
 {
+    [BsonIgnoreExtraElements(Inherited = true)]
     public class EntityBase : IRowLevelSecurity
     {
         [BsonId]

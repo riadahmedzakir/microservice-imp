@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataService.Application.UseCase
+namespace DataService.Application.Interface
 {
-    interface ICommandModel<T> where T : EntityBase
+    public interface ICommandModel<T>
     {
         Task InsertItem(string CollectionName, T Item);
         Task UpdatedItem(string CollectionName, T Item);
