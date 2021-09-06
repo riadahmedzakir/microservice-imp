@@ -18,7 +18,9 @@ Replicating identity micro service with JWT token based authentication
         # Added self-signed certificate for production enviorment.
         # Created client/tenant to create and login with user. - https://github.com/riadahmedzakir/jwt-token-base-authenticaion
 ## To do        
-        # Take default identityserver4 token to custom controller.
         # Make token and refresh token validity configurable.
         # Implement social login.
         # Look into Azure MFA.        
+        # Generic database service with rolebased data.
+        # Configurable entities and permissions.
+        # Data validation
